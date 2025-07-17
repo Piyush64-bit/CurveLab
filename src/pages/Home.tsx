@@ -313,7 +313,7 @@ const CurveLabLanding = () => {
                         <p className="text-sm text-gray-500 flex items-center justify-center flex-wrap">
                             Developers can{" "}
                             <a
-                                href="https://github.com/..."
+                                href="https://github.com/U1000000000000/CurveLab"
                                 className="inline-flex items-center gap-1 ml-1 align-middle leading-none hover:text-white transition"
                             >
                                 <Github className="w-4 h-4" />
