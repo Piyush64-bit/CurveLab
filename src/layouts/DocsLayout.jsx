@@ -1,13 +1,8 @@
-// DocsLayout.tsx
-import { ReactNode } from "react";
+// DocsLayout.jsx
 import Sidebar from "../components/Sidebar";
 import Footer from "../components/Footer";
 
-interface DocsLayoutProps {
-  children: ReactNode;
-}
-
-const DocsLayout = ({ children }: DocsLayoutProps) => (
+const DocsLayout = ({ children }) => (
   <div className="flex flex-col min-h-screen">
     <div className="flex flex-1 relative">
       <Sidebar />

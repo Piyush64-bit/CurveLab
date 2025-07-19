@@ -5,10 +5,6 @@ export const StaticNoise = ({
   opacity = 0.3,
   backgroundSize = "100px",
   className = "",
-}: {
-  opacity?: number;
-  backgroundSize?: string;
-  className?: string;
 }) => (
   <div
     className={className}

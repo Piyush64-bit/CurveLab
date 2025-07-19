@@ -1,7 +1,7 @@
-// components/Logo.tsx
+// components/Logo.jsx
 import React from "react";
 
-export default function Logo({ className = "" }: { className?: string }) {
+export default function Logo({ className = "" }) {
   return (
     <span
       className={`font-light tracking-tight text-gray-300 hover:text-white transition-colors duration-300 ${className}`}

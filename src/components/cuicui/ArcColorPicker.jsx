@@ -2,9 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 
-type Color = { value: string; hue: number };
-
-const COLORS: Color[] = [
+const COLORS = [
   { value: "#6B6E8D", hue: 236 }, // Slate
   { value: "#79E7D0", hue: 168 }, // Aqua
   { value: "#7AA2F7", hue: 223 }, // Blue
@@ -16,14 +14,11 @@ const COLORS: Color[] = [
 export const ArcColorPicker = ({
   selectedColor,
   setSelectedColor,
-}: {
-  selectedColor: string;
-  setSelectedColor: (color: string) => void;
 }) => {
-  const [baseColor, setBaseColor] = useState<Color>(COLORS[0]);
+  const [baseColor, setBaseColor] = useState(COLORS[0]);
   const [saturation, setSaturation] = useState(50);
   const [brightness, setBrightness] = useState(50);
-  const sliderRef = useRef<HTMLDivElement>(null);
+  const sliderRef = useRef(null);
 
   useEffect(() => {
     const match = COLORS.find(c =>
@@ -38,7 +33,7 @@ export const ArcColorPicker = ({
     if (navigator.vibrate) navigator.vibrate(50);
   };
 
-  const handleColorSelect = (color: Color) => {
+  const handleColorSelect = (color) => {
     setBaseColor(color);
     setSaturation(50);
     setBrightness(50);
@@ -46,7 +41,7 @@ export const ArcColorPicker = ({
     vibrate();
   };
 
-  const handleSliderMove = (event: MouseEvent | TouchEvent) => {
+  const handleSliderMove = (event) => {
     if (!sliderRef.current) return;
     const rect = sliderRef.current.getBoundingClientRect();
     const clientX =
@@ -63,7 +58,7 @@ export const ArcColorPicker = ({
     vibrate();
   };
 
-  const updateColor = (hue: number, sat: number, bri: number) => {
+  const updateColor = (hue, sat, bri) => {
     const newHsl = `hsl(${hue}, ${sat}%, ${bri}%)`;
     setSelectedColor(newHsl);
   };
@@ -84,7 +79,7 @@ export const ArcColorPicker = ({
         className="h-40 sm:h-48 relative cursor-crosshair rounded-md overflow-hidden"
         onMouseDown={(e) => {
           handleSliderMove(e.nativeEvent);
-          const move = (ev: MouseEvent) => handleSliderMove(ev);
+          const move = (ev) => handleSliderMove(ev);
           const up = () => {
             document.removeEventListener("mousemove", move);
             document.removeEventListener("mouseup", up);
@@ -94,7 +89,7 @@ export const ArcColorPicker = ({
         }}
         onTouchStart={(e) => {
           handleSliderMove(e.nativeEvent);
-          const move = (ev: TouchEvent) => handleSliderMove(ev);
+          const move = (ev) => handleSliderMove(ev);
           const end = () => {
             document.removeEventListener("touchmove", move);
             document.removeEventListener("touchend", end);

@@ -4,8 +4,8 @@ import Footer from '../components/Footer';
 import { Helmet } from 'react-helmet';
 
 const CurveLabLanding = () => {
-  const [hoveredCard, setHoveredCard] = useState<string | null>(null);
-  const curvesSectionRef = useRef<HTMLDivElement>(null);
+  const [hoveredCard, setHoveredCard] = useState(null);
+  const curvesSectionRef = useRef(null);
 
   const scrollToCurves = () => {
     if (curvesSectionRef.current) {

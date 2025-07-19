@@ -1,7 +1,7 @@
-// src/components/Logos.tsx
+// src/components/Logos.jsx
 import React from "react";
 
-export const HypocycloidLogo = ({ className = "" }: { className?: string }) => (
+export const HypocycloidLogo = ({ className = "" }) => (
   <svg
     viewBox="0 0 120 120"
     xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +22,7 @@ export const HypocycloidLogo = ({ className = "" }: { className?: string }) => (
   </svg>
 );
 
-export const EpicycloidLogo = ({ className = "" }: { className?: string }) => (
+export const EpicycloidLogo = ({ className = "" }) => (
     <svg 
         viewBox="0 0 120 120"
         xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ export const EpicycloidLogo = ({ className = "" }: { className?: string }) => (
     </svg>
 );
 
-export const HypotrochoidLogo = ({ className = "" }: { className?: string }) => (
+export const HypotrochoidLogo = ({ className = "" }) => (
     <svg
         viewBox="0 0 120 120"
         xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +69,7 @@ export const HypotrochoidLogo = ({ className = "" }: { className?: string }) => 
     </svg>
 );
 
-export const EpitrochoidLogo = ({ className = "" }: { className?: string }) => (
+export const EpitrochoidLogo = ({ className = "" }) => (
     <svg
         viewBox="0 0 120 120"
         xmlns="http://www.w3.org/2000/svg"
@@ -106,7 +106,7 @@ export const EpitrochoidLogo = ({ className = "" }: { className?: string }) => (
     </svg>
 );
 
-export const LissajousLogo = ({ className = "" }: { className?: string }) => (
+export const LissajousLogo = ({ className = "" }) => (
     <svg
         viewBox="0 0 120 120"
         xmlns="http://www.w3.org/2000/svg"
@@ -129,7 +129,7 @@ export const LissajousLogo = ({ className = "" }: { className?: string }) => (
     </svg>
 );
 
-export const RoseLogo = ({ className = "" }: { className?: string }) => (
+export const RoseLogo = ({ className = "" }) => (
     <svg
       viewBox="0 0 120 120"
       xmlns="http://www.w3.org/2000/svg"
@@ -146,7 +146,7 @@ export const RoseLogo = ({ className = "" }: { className?: string }) => (
     </svg>
 );
 
-export function CurveLabLogo({ className = "" }: { className?: string }) {
+export function CurveLabLogo({ className = "" }) {
   return (
     <span
       className={`font-light tracking-tight text-gray-300 hover:text-white transition-colors duration-300 ${className}`}

@@ -1,9 +1,9 @@
-// Topbar.tsx
+// Topbar.jsx
 import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { CurveLabLogo } from "../components/Logos";
 
-const Topbar: React.FC = () => {
+const Topbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const links = [

@@ -1,4 +1,4 @@
-// Sidebar.tsx
+// Sidebar.jsx
 import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import {CurveLabLogo} from "../components/Logos";

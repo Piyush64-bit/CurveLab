@@ -5,10 +5,6 @@ export const DotsPattern = ({
   width = 8,
   height = 8,
   className = "",
-}: {
-  width?: number;
-  height?: number;
-  className?: string;
 }) => (
   <svg
     className={className}
