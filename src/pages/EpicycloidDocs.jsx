@@ -1,7 +1,7 @@
-// components/docs/EpicycloidDocs.tsx
+// components/docs/EpicycloidDocs.jsx
 import React from "react";
 import { Play, Pause, Palette, Download, Zap } from "lucide-react";
-import {EpicycloidLogo} from "../components/Logos.tsx";
+import {EpicycloidLogo} from "../components/Logos.jsx";
 import {Helmet} from "react-helmet";
 
 // Custom minimalist icons with responsive sizing
@@ -63,7 +63,7 @@ const PerformanceIcon = () => (
   </svg>
 );
 
-const EpicycloidDocs: React.FC = () => {
+const EpicycloidDocs = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       <Helmet>
@@ -261,7 +261,7 @@ y(t) = (R + r) * sin(t) - r * sin(((R + r)/r) * t + phaseShift)`}
               <ul className="list-disc list-inside text-gray-300 space-y-1 text-sm sm:text-base">
                 <li>Green ≥ 55 FPS</li>
                 <li>Yellow ≥ 30 FPS</li>
-                <li>Red &lt; 30 FPS</li>
+                <li>Red < 30 FPS</li>
               </ul>
             </div>
           </section>
